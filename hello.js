@@ -49,4 +49,4 @@ app.get('/customer/',(req,res)=>{
 
 
 console.log('API GENERATED : '+method + path )
-app.listen(3334);
+app.listen(3334,'138.68.109.241');
