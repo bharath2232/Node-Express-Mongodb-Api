@@ -12,6 +12,7 @@ const method = 'get'
 
 
 app.use(bodyParser.json());
+app.use(express.static('web'));
 
 const john = new customer({
     id : 154545,
@@ -28,6 +29,11 @@ app.post('/customer/create',(req,res)=>{
  .catch(err => console.log('error duude', err) )
  
 })
+
+app.get('/',(req,res)=>{
+    res.send(index.html)
+})
+
 
 app.get('/customer/',(req,res)=>{
     const sevran =  customer.find({}).then(result => {
